@@ -1,0 +1,158 @@
+% LaTeX Article Template - customizing page format
+%
+% LaTeX document uses 10-point fonts by default.  To use
+% 11-point or 12-point fonts, use \documentclass[11pt]{article}
+% or \documentclass[12pt]{article}.
+\documentclass{article}
+
+% Set left margin - The default is 1 inch, so the following 
+% command sets a 1.25-inch left margin.
+\setlength{\oddsidemargin}{0.25in}
+
+% Set width of the text - What is left will be the right margin.
+% In this case, right margin is 8.5in - 1.25in - 6in = 1.25in.
+\setlength{\textwidth}{6in}
+
+% Set top margin - The default is 1 inch, so the following 
+% command sets a 0.75-inch top margin.
+\setlength{\topmargin}{-0.25in}
+
+% Set height of the text - What is left will be the bottom margin.
+% In this case, bottom margin is 11in - 0.75in - 9.5in = 0.75in
+\setlength{\textheight}{8in}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{ {./} }
+
+\setlength{\parskip}{5pt} 
+\pagestyle{fancyplain}
+% Set the beginning of a LaTeX document
+\begin{document}
+
+\lhead{Drew Remmenga MATH 335}
+\rhead{HW \#6}
+%\lhead{Independent Study}
+%\rhead{R Lab}
+
+\begin{enumerate}
+\item
+	\begin{enumerate}
+	\item
+		\begin{equation*}
+		\begin{split}
+		Z & = \frac{6-2}{2\sqrt{2}}  \\
+		Z & = \sqrt{2} \\
+		P(x > Z) & = .07927 \\
+		\end{split}
+		\end{equation*}
+	\item
+		Normal with:
+		\begin{equation*}
+		\begin{split}
+		\mu & = \frac{8X+4*2}{4+8} \\
+		\mu & = \frac{2X+2}{3} \\
+		\sigma^{2} & = \frac{4*8}{8+4} \\
+		\sigma^{2} & = \frac{32}{12} \\
+		\sigma^{2} & = \frac{8}{3} \\
+		\end{split}
+		\end{equation*}
+	\item
+		\begin{equation*}
+		\begin{split}
+		\mu & = \frac{2(2)+2}{3} \\
+		\mu & = 2 \\
+		Z & = \frac{6 - 2}{\sqrt{\frac{8}{3}}} \\
+		Z & = 2.449 \\
+		P(x > 2.449) & = .00714 \\
+		\end{split}
+		\end{equation*}
+	\item
+		\begin{equation*}
+		\begin{split}
+		\hat{\theta} & = \frac{2X+2}{3} \\
+		\end{split}
+		\end{equation*}
+	\item
+		Yes. Gaussian likelihood with Gaussian Prior and Gaussian Posterior.
+	\end{enumerate}
+\item
+	\begin{enumerate}
+	\item
+		\begin{equation*}
+		\begin{split}
+		\mu & = \frac{1}{1+3} \\
+		\mu & = \frac{1}{4} 
+		\end{split}
+		\end{equation*}
+	\item
+		\begin{equation*}
+		\begin{split}
+		\alpha & = 1+X \\
+		\beta & = 3+20 - X \\
+		\beta & = 23 - X \\
+		\end{split}
+		\end{equation*}
+	\item
+		\begin{equation*}
+		\begin{split}
+		\hat{\theta} & = \frac{\bar{X}}{20} \\
+		\hat{\theta} & = \frac{X}{20} \\
+		\end{split}
+		\end{equation*}
+	\item
+		\begin{equation*}
+		\begin{split}
+		\hat{\theta}_{Bays'} & = \frac{1+X}{24} \\
+		\hat{\theta}_{Bays'}  & = \hat{\theta}_{MLE} \\
+		\frac{X}{20} & = \frac{1+X}{24} \\
+		24X & = 20 + 20X \\
+		X & = 5 \\
+		\hat{\theta}_{Bays'} & < \hat{\theta}_{MLE}, X \in  (5, \infty)\\
+		\hat{\theta}_{Bays'} & > \hat{\theta}_{MLE}, X \in (-\infty, 5)
+		\end{split}
+		\end{equation*}
+	\item
+		\begin{equation*}
+		\begin{split}
+		\hat{\theta}_{Bays'} & = \frac{1+X}{24} \\
+		\end{split}
+		\end{equation*}
+	\end{enumerate}
+\item
+		\begin{equation*}
+		\begin{split}
+		\Gamma(1) & = 1 \\
+		\Gamma(2) & = 1 \\
+		B(1,1) & = \frac{x^{1-1}(1-x)^{1-1}}{\frac{\Gamma (1) \Gamma (1)}{\Gamma (1+1)}} I(x)_{0,1} \\
+		B(1,1) & = \frac{(1)(1)}{\frac{(1)(1)}{(1)}}I(x)_{0,1} \\
+		B(1,1) & = 1 I(x)_{0,1} \\
+		B(1,1) & = U(0,1) 
+		\end{split}
+		\end{equation*}
+\item
+	\begin{enumerate}
+	\item
+
+ X ~ Bin(50,$\theta$), X = 3, U(0,1) = B(1,1) 
+
+		\begin{equation*}
+		\begin{split}
+		B(\alpha + X, \beta + n - x) & = B(1+3, 1+50-3) \\
+		& = B(4, 48) \\ 
+		\end{split}
+		\end{equation*}
+	
+	\item
+		\begin{equation*}
+		\begin{split}
+		\hat{\theta}_{Bays'} & = \frac{4}{52} \\
+		\end{split}
+		\end{equation*}
+	\end{enumerate}
+\end{enumerate}
+
+\end{document}
